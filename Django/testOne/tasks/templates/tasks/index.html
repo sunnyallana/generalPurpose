@@ -1,16 +1,9 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Tasks</title>
-        <link href="{% static 'tasks/style.css' %}" rel="stylesheet">
-    </head>
-    <body>
+{% extends "tasks/layout.html" %}
+    {%block body%}
         <h1>Tasks:</h1>
         <ul>
         {%for task in tasksList%}
-        <li>{{task}}</li>
+            <li>{{task}}</li>
         {%endfor%}
         </ul>
-    </body>
-</html>
+    {%endblock%}
