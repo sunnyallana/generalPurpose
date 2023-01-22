@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django import forms
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 # Create your views here.
 class addTask(forms.Form):
-    taskGet = forms.CharField(label = "New Task")
+ taskGet = forms.CharField(label = "New Task")
 
 def index(request):
     if "tasks" not in request.session:
@@ -14,7 +16,8 @@ def add(request):
         formWithUserInput = addTask(request.POST)
         if formWithUserInput.is_valid():
             taskStore = formWithUserInput.cleaned_data["taskGet"]
-            request.session["tasks"] += taskStore
+            request.session["tasks"] += [taskStore]
+            return HttpResponseRedirect(reverse("tasks:index"))
         else:
             return render(request, "tasks/add.html", {"formPlug": formWithUserInput})
     return render(request, "tasks/add.html", {"formPlug": addTask()})
