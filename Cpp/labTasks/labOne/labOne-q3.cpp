@@ -1,6 +1,6 @@
 /*
 	Author: Sunny Allana 22K-4149
-	Purpose: To create a C++ program that takes a number as an input and print it in words?
+	Purpose: To create a C++ program that takes a number as an input and print it in words
 */
 // Preprocessing Directives
 #include <iostream>

@@ -1,6 +1,6 @@
 /*
 	Author: Sunny Allana 22K-4149
-	Purpose: To create a C++ program that finds age of the user
+	Purpose: To create a C++ program that takes current year and year of user's birth as an input and finds age of the user
 */
 // Preprocessing Directives
 #include <iostream>

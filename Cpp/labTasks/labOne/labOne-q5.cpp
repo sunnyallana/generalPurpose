@@ -1,3 +1,7 @@
+/*
+	Author: Sunny Allana 22K-4149
+	Purpose: To create a C++ program that finds the maximum and minimum value of the inputted array
+*/
 // Preprocessing Directives
 #include <iostream>
 using namespace std;
