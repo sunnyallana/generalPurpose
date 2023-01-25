@@ -1,6 +1,6 @@
 /*
 	Author: Sunny Allana 22K-4149
-	Purpose: To create a C++ program that finds length of a string using pointers
+	Purpose: To create a C++ program that finds the length of a string using pointers
 */
 // Preprocessing Directives
 #include <iostream>
