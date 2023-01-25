@@ -1,7 +1,6 @@
 /*
 	Author: Sunny Allana 22K-4149
-	Purpose: To create a C++ program that takes input from user in a 2D array and display the cube of
-	each row and column in a matrix format
+	Purpose: To create a C++ program that takes input from user in a 2D array and display the cube of each row and column in a matrix format
 */
 // Preprocessing Directives
 #include <iostream>
