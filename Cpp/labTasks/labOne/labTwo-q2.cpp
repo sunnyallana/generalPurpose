@@ -1,3 +1,7 @@
+/*
+	Author: Sunny Allana 22K-4149
+	Purpose: To create a C++ program that swaps two numbers without using a third variable
+*/
 // Preprocessing Directives
 #include <iostream>
 using namespace std;

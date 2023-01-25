@@ -1,3 +1,7 @@
+/*
+	Author: Sunny Allana 22K-4149
+	Purpose: To create a C++ program that finds age of the user
+*/
 // Preprocessing Directives
 #include <iostream>
 using namespace std;

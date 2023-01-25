@@ -1,12 +1,16 @@
+/*
+	Author: Sunny Allana 22K-4149
+	Purpose: To create a C++ program that takes a number as an input and print it in words?
+*/
 // Preprocessing Directives
 #include <iostream>
 #include <string>
 using namespace std;
 // Defining Main
 int main(void){
-// Declaring necessary variables
+// Declaring and initializing necessary variables
 	string num;
-	int length, i = 0;
+	int length = 0, i = 0;
 // Taking input from user
 	cout << "Enter a number: ";
 	cin >> num;
