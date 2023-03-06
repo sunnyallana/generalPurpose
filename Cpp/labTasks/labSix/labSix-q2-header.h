@@ -18,11 +18,17 @@ public:
 		this->price = price;
 		this->quantity = quantity;
 	}
-	void displayBook() const {
-		cout << "Title: " << title << endl;
-		cout << "Author: " << author << endl;
-		cout << "Price: " << price << endl;
-		cout << "Quantity: " << quantity << endl;
+	string getTitle() const {
+		return title;
+	}
+	string getAuthor() const {
+		return author;
+	}
+	double getPrice() const {
+		return price;
+	}
+	int getQuantity() const {
+		return quantity;
 	}
 };
 // Defining a class named purchase and declaring its attributes
@@ -30,18 +36,21 @@ class purchase {
 private:
 	string customerName;
 	int orderNumber;
-	book* Book;
+	book Book;
 	int quantityOrdered;
 public:
-	purchase(string customerName, int orderNumber, book* Book, int quantityOrdered) {
+	purchase(string customerName, int orderNumber, int quantityOrdered) : Book("All The Bright Places", "Jennifer Niven", 10.34, 2) {
 		this->customerName = customerName;
 		this->orderNumber = orderNumber;
-		this->Book = Book;
 		this->quantityOrdered = quantityOrdered;
 	}
 	void printPurchase() const {
 		cout << "Customer Name: " << customerName << endl;
 		cout << "Order Number: " << orderNumber << endl;
-		Book->displayBook();
+		cout << "Title: " << Book.getTitle() << endl;
+		cout << "Author: " << Book.getAuthor() << endl;
+		cout << "Price: " << Book.getPrice() << endl;
+		cout << "Quantity: " << Book.getQuantity() << endl;
+		cout << "Total Price: " << Book.getQuantity() * Book.getPrice() << endl;
 	}
 };
