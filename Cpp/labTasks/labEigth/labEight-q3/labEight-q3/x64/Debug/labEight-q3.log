@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\SunnyAllana\Desktop\labEight-q3\labEight-q3\Source.cpp(74,53): warning C4305: 'argument': truncation from 'double' to 'const float'
+C:\Users\SunnyAllana\Desktop\labEight-q3\labEight-q3\Source.cpp(76,24): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+  labEight-q3.vcxproj -> C:\Users\SunnyAllana\Desktop\labEight-q3\x64\Debug\labEight-q3.exe
