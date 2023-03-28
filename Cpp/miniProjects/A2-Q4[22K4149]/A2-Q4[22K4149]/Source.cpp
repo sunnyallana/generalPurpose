@@ -50,7 +50,7 @@ public:
 	}
 	void operator==(const player& otherPlayer) {
 		if (this->getHealth() == otherPlayer.getHealth()) {
-			cout << "Both players' health is equal" << endl;
+			cout << "Both players' health are equal" << endl;
 		}
 		else if (this->getHealth() > otherPlayer.getHealth()) {
 			cout << getName() << " (Calling Object) has greater health than " << otherPlayer.getName() << " (Other Object)" << endl;
@@ -139,5 +139,3 @@ int main() {
 
 	return 0;
 }
-
-
