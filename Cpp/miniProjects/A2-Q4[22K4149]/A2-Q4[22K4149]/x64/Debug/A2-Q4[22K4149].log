@@ -1,5 +1,2 @@
 ﻿  Source.cpp
-C:\Users\SunnyAllana\Desktop\A2-Q4[22K4149]\A2-Q4[22K4149]\Source.cpp(100,21): error C2280: 'gameObject &gameObject::operator =(const gameObject &)': attempting to reference a deleted function
-C:\Users\SunnyAllana\Desktop\A2-Q4[22K4149]\A2-Q4[22K4149]\Source.cpp(33,1): message : compiler has generated 'gameObject::operator =' here
-C:\Users\SunnyAllana\Desktop\A2-Q4[22K4149]\A2-Q4[22K4149]\Source.cpp(33,1): message : 'gameObject &gameObject::operator =(const gameObject &)': function was implicitly deleted because a data member 'gameObject::name' has either no appropriate copy assignment operator or overload resolution was ambiguous
-C:\Users\SunnyAllana\Desktop\A2-Q4[22K4149]\A2-Q4[22K4149]\Source.cpp(8,15): message : see declaration of 'gameObject::name'
+  A2-Q4[22K4149].vcxproj -> C:\Users\SunnyAllana\Desktop\A2-Q4[22K4149]\x64\Debug\A2-Q4[22K4149].exe

@@ -10,8 +10,8 @@ private:
 	int y;
 public:
 	gameObject() : name("22K-4149") {
-		x = NULL;
-		y = NULL;
+		x = 0;
+		y = 0;
 	}
 	gameObject(const int& receiveX, const int& receiveY) : name("22K-4149") {
 		x = receiveX;
@@ -26,14 +26,14 @@ public:
 	int getY() const { return y; }
 
 	virtual void draw() const {
-		cout << "Name: " << endl;
-		cout << "X: " << endl;
-		cout << "Y: " << endl;
+		cout << "Name: " << name << endl;
+		cout << "X: " << x << endl;
+		cout << "Y: " << y << endl;
 	}
 };
 
 
-class player : protected gameObject {
+class player : public gameObject {
 private:
 	int health;
 public:
@@ -43,15 +43,25 @@ public:
 
 	void setHealth(const int& receiveHealth) { health = receiveHealth; }
 	int getHealth() const { return health; }
-
 	void draw() const {
 // Extension case of over-riding
 		gameObject::draw();
-		cout << "Health: " << health << endl;
+		cout << "Health: " << health << endl << endl;
+	}
+	void operator==(const player& otherPlayer) {
+		if (this->getHealth() == otherPlayer.getHealth()) {
+			cout << "Both players' health is equal" << endl;
+		}
+		else if (this->getHealth() > otherPlayer.getHealth()) {
+			cout << getName() << " (Calling Object) has greater health than " << otherPlayer.getName() << " (Other Object)" << endl;
+		}
+		else {
+			cout << getName() << " (Calling Object) has lesser health than " << otherPlayer.getName() << " (Other Object)" << endl;
+		}
 	}
 };
 
-class enemy : protected gameObject {
+class enemy : public gameObject {
 private:
 	int damage;
 public:
@@ -65,11 +75,11 @@ public:
 	void draw() const {
 // Extension case of over-riding
 		gameObject::draw();
-		cout << "Damage: " << damage << endl;
+		cout << "Damage: " << damage << endl << endl;
 	}
 };
 
-class powerUp : protected gameObject {
+class powerUp : public gameObject {
 private:
 	string effect;
 public:
@@ -83,7 +93,7 @@ public:
 	void draw() const {
 // Extension case of over-riding
 		gameObject::draw();
-		cout << "Effect: " << effect << endl;
+		cout << "Effect: " << effect << endl << endl;
 	}
 };
 
@@ -91,17 +101,43 @@ class game {
 private:
 	static int countObject;
 	const int sizeArray;
-	gameObject* Game = nullptr;
+	gameObject** Game;
 public:
-	game(const int& receiveSize = 0) : sizeArray(receiveSize), Game(new gameObject[sizeArray])  {}
+	game(const int& receiveSize = 0) : sizeArray(receiveSize), Game(new gameObject*[sizeArray]) {}
 	~game() { delete[] Game; }
 
-	void addToGame(const gameObject& receiveObject) {
-		Game[countObject] = receiveObject;
-		countObject++;
+	void addToGame(gameObject& receiveObject) {
+		if (sizeArray == game::countObject) {
+			cout << "Cannot add more objects. Exiting....." << endl;
+			exit(1);
+		}
+		Game[countObject++] = &receiveObject;
 	}
 	void drawAll() const {
-
+		for (int i = 0; i < game::countObject; i++) {
+			Game[i]->draw();
+		}
 	}
 };
 int game::countObject = 0;
+
+int main() {
+	player pOne(2, 3, 100);
+	player pTwo(9, 8, 100);
+	enemy eOne(5, 4, 50);
+	powerUp pUOne(6, 7, "Invisibility");
+
+	game gOne(4);
+
+	gOne.addToGame(pOne);
+	gOne.addToGame(pTwo);
+	gOne.addToGame(eOne);
+	gOne.addToGame(pUOne);
+	gOne.drawAll();
+
+	pOne == pTwo;
+
+	return 0;
+}
+
+
