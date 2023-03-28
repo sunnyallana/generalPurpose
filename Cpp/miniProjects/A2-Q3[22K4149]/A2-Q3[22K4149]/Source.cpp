@@ -11,9 +11,15 @@ public:
 	product(const string& receiveName, const float& receivePrice): name(receiveName), price(receivePrice) {}
 	virtual float getDiscountedPrice() const { return price; }
 	virtual void printDetails() const {
-		cout << endl << "Name: " << name << endl;
+		cout << "Name: " << name << endl;
 		cout << "Price (PKR): " << price << endl;
 		cout << "Discounted Price for ordinary customers (PKR): " << getDiscountedPrice() << endl;
+	}
+// PART B: OPERATOR OVERLOADING
+	product operator&(const product& otherProduct) {
+		float averagePrice = (this->getDiscountedPrice() + otherProduct.getDiscountedPrice()) / 2.0;
+		string revisedName = this->name + " & " + otherProduct.name;
+		return product(revisedName, averagePrice);
 	}
 };
 
@@ -82,16 +88,17 @@ public:
 			float discountedPrice = (productObject->getDiscountedPrice() * 0.9);
 			if (balance >= discountedPrice) {
 				balance -= discountedPrice;
-				cout << "Product bought successfully by VIP" << endl;
+				cout << endl << "Product bought successfully by VIP" << endl;
 				//cout << "New Balance: " << getBalance() << endl << endl;
 			}
 			else {
-				cout << "VIP has insufficient Balance to buy the product" << endl << endl;
+				cout << endl << "VIP has insufficient Balance to buy the product" << endl << endl;
 			}
 	}
 };
 
 int main(void) {
+	// PART A: INHERITANCE AND POLYMORPHISM: OVER-RIDING
 	book* bOne;
 	bOne = new book("All The Bright Places", 900, "Jennifer Niven");
 	electronic* eOne; 
@@ -112,6 +119,13 @@ int main(void) {
 	delete bOne;
 	delete eOne;
 	delete cOne;
+
+	// PART B: OPERATOR OVERLOADING
+	product pOne("Mouse", 10);
+	product pTwo("Keyboard", 2);
+	product pThree = pOne & pTwo;
+
+	pThree.printDetails();
 
 	return 0;
 }
