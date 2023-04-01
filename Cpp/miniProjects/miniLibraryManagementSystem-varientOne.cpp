@@ -33,10 +33,10 @@ class library {
 private:
 	static int bookCount;
 	const int maxCapacity;
-	book* Book;
+	book** Book;
 public:
 	library(int receiveMaxCapacity) : maxCapacity(receiveMaxCapacity) {
-		Book = new book[maxCapacity];
+		Book = new book*[maxCapacity];
 	}
 	~library() {
 		delete[] Book;
@@ -46,7 +46,7 @@ public:
 			cout << "Cannot add more books to the library. Exiting......" << endl;
 			exit(1);
 		}
-		Book[bookCount++] = instance;
+		Book[bookCount++] = &instance;
 		cout << "Book added to the library....." << endl;
 	}
 	void displayBook() const {

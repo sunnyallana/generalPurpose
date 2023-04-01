@@ -101,6 +101,7 @@ class game {
 private:
 	static int countObject;
 	const int sizeArray;
+// I had to use double pointer here, since I didn't make separate functions for adding players/enemy etc. A single function is doing that job for me and this was the cost of it.
 	gameObject** Game;
 public:
 	game(const int& receiveSize = 0) : sizeArray(receiveSize), Game(new gameObject*[sizeArray]) {}
