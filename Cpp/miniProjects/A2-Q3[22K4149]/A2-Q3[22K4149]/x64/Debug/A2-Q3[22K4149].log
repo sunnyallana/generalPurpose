@@ -1,6 +1,0 @@
-﻿  Source.cpp
-C:\Users\SunnyAllana\Desktop\A2-Q3[22K4149]\A2-Q3[22K4149]\Source.cpp(20,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\SunnyAllana\Desktop\A2-Q3[22K4149]\A2-Q3[22K4149]\Source.cpp(55,50): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\SunnyAllana\Desktop\A2-Q3[22K4149]\A2-Q3[22K4149]\Source.cpp(80,50): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\SunnyAllana\Desktop\A2-Q3[22K4149]\A2-Q3[22K4149]\Source.cpp(88,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  A2-Q3[22K4149].vcxproj -> C:\Users\SunnyAllana\Desktop\A2-Q3[22K4149]\x64\Debug\A2-Q3[22K4149].exe
