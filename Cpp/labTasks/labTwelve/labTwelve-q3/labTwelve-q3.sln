@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "labTwelve-q3", "labTwelve-q3\labTwelve-q3.vcxproj", "{65390658-F704-4B18-9547-2A5D94B82090}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65390658-F704-4B18-9547-2A5D94B82090}.Debug|x64.ActiveCfg = Debug|x64
+		{65390658-F704-4B18-9547-2A5D94B82090}.Debug|x64.Build.0 = Debug|x64
+		{65390658-F704-4B18-9547-2A5D94B82090}.Debug|x86.ActiveCfg = Debug|Win32
+		{65390658-F704-4B18-9547-2A5D94B82090}.Debug|x86.Build.0 = Debug|Win32
+		{65390658-F704-4B18-9547-2A5D94B82090}.Release|x64.ActiveCfg = Release|x64
+		{65390658-F704-4B18-9547-2A5D94B82090}.Release|x64.Build.0 = Release|x64
+		{65390658-F704-4B18-9547-2A5D94B82090}.Release|x86.ActiveCfg = Release|Win32
+		{65390658-F704-4B18-9547-2A5D94B82090}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23C766BE-A8EE-4B11-BACE-338588F5CA44}
+	EndGlobalSection
+EndGlobal
